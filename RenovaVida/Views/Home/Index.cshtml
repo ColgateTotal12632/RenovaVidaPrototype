@@ -17,6 +17,16 @@
                 <li class="nav-item"><a class="nav-link fw-semibold" href="#escolas">Escolas</a></li>
                 <li class="nav-item"><a class="nav-link fw-semibold" href="#sobre">Sobre Nós</a></li>
                 <li class="nav-item"><a class="nav-link fw-semibold" href="#contato">Contato</a></li>
+<li class="nav-item d-flex align-items-center">
+                    <a asp-area="" asp-controller="Home" asp-action="Login" class="btn btn-login d-flex align-items-center">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="me-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5zM4 20c0-3.866 3.582-7 8-7s8 3.134 8 7v1H4v-1z" fill="#1967FF"/>
+    </svg>
+
+    Entrar
+  </a>
+</li>
+
             </ul>
         </div>
     </div>
@@ -171,100 +181,111 @@
 <section id="escolas" class="py-5 bg-light">
     <div class="container">
         <h2 class="text-center mb-3 fw-bold">Encontre a Escola Ideal</h2>
-        <div class="d-flex justify-content-center mb-5">
+        <div class="d-flex justify-content-center mb-3">
             <span style="width:80px; height:4px; background:#0d6efd; border-radius:4px; display:inline-block;"></span>
         </div>
 
-        <div id="carouselEscolas" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
+        <div class="d-flex justify-content-center mb-4">
+            <select id="cidadeFiltro" class="form-select w-auto">
+                <option value="todas">Todas as Cidades</option>
+                <option value="São Paulo">São Paulo</option>
+                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                <option value="Belo Horizonte">Belo Horizonte</option>
+            </select>
+        </div>
 
-                <div class="carousel-item active">
-                    <div class="row g-4 justify-content-center">
-                        <div class="col-md-4">
-                            <div class="card shadow-lg h-100 border-0 rounded-4 hover-card">
-                                <div class="card-body text-center p-4">
-                                    <h5 class="card-title fw-bold">Colégio Alfa</h5>
-                                    <p class="text-muted">Ensino Fundamental e Médio</p>
-                                    <p class="fs-3 fw-bold text-gradient">R$ 450,00</p>
-                                    <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Saiba Mais</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="card shadow-lg h-100 border-0 rounded-4 hover-card">
-                                <div class="card-body text-center p-4">
-                                    <h5 class="card-title fw-bold">Escola Beta</h5>
-                                    <p class="text-muted">Educação Infantil</p>
-                                    <p class="fs-3 fw-bold text-gradient">R$ 320,00</p>
-                                    <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Saiba Mais</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="card shadow-lg h-100 border-0 rounded-4 hover-card">
-                                <div class="card-body text-center p-4">
-                                    <h5 class="card-title fw-bold">Instituto RedPill</h5>
-                                    <p class="text-muted">Ensino Médio</p>
-                                    <p class="fs-3 fw-bold text-gradient">R$ 510,00</p>
-                                    <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Saiba Mais</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div id="escolasContainer" class="row g-4 justify-content-center">
+            <div class="col-md-4 escola-card" data-cidade="São Paulo">
+                <div class="card shadow-lg h-100 border-0 rounded-4 p-3">
+                    <h5 class="fw-bold">Colégio Alfa</h5>
+                    <p class="text-muted">Ensino Fundamental e Médio</p>
+                    <p class="fs-3 fw-bold text-gradient">R$ 450,00</p>
+                    <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Saiba Mais</a>
                 </div>
-
-                <div class="carousel-item">
-                    <div class="row g-4 justify-content-center">
-                        <div class="col-md-4">
-                            <div class="card shadow-lg h-100 border-0 rounded-4 hover-card">
-                                <div class="card-body text-center p-4">
-                                    <h5 class="card-title fw-bold">Colégio Based</h5>
-                                    <p class="text-muted">Ensino Fundamental</p>
-                                    <p class="fs-3 fw-bold text-gradient">R$ 390,00</p>
-                                    <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Saiba Mais</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="card shadow-lg h-100 border-0 rounded-4 hover-card">
-                                <div class="card-body text-center p-4">
-                                    <h5 class="card-title fw-bold">Escola Mogado</h5>
-                                    <p class="text-muted">Educação Infantil</p>
-                                    <p class="fs-3 fw-bold text-gradient">R$ 280,00</p>
-                                    <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Saiba Mais</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="card shadow-lg h-100 border-0 rounded-4 hover-card">
-                                <div class="card-body text-center p-4">
-                                    <h5 class="card-title fw-bold">Instituto Sigma</h5>
-                                    <p class="text-muted">Ensino Médio e Técnico</p>
-                                    <p class="fs-3 fw-bold text-gradient">R$ 620,00</p>
-                                    <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Saiba Mais</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselEscolas" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselEscolas" data-bs-slide="next">
-                <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
-                <span class="visually-hidden">Próximo</span>
-            </button>
+            <div class="col-md-4 escola-card" data-cidade="Rio de Janeiro">
+                <div class="card shadow-lg h-100 border-0 rounded-4 p-3">
+                    <h5 class="fw-bold">Escola Beta</h5>
+                    <p class="text-muted">Educação Infantil</p>
+                    <p class="fs-3 fw-bold text-gradient">R$ 320,00</p>
+                    <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Saiba Mais</a>
+                </div>
+            </div>
+            <div class="col-md-4 escola-card" data-cidade="Belo Horizonte">
+                <div class="card shadow-lg h-100 border-0 rounded-4 p-3">
+                    <h5 class="fw-bold">Instituto RedPill</h5>
+                    <p class="text-muted">Ensino Médio</p>
+                    <p class="fs-3 fw-bold text-gradient">R$ 510,00</p>
+                    <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Saiba Mais</a>
+                </div>
+            </div>
+            <div class="col-md-4 escola-card" data-cidade="Rio de Janeiro">
+            <div class="card shadow-lg h-100 border-0 rounded-4 p-3">
+                <h5 class="fw-bold">Colégio Bariri</h5>
+                <p class="text-muted">Ensino Médio</p>
+                <p class="fs-3 fw-bold text-gradient">R$ 267,00</p>
+                <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Saiba Mais</a>
+            </div>
+        </div>
+            <div class="col-md-4 escola-card" data-cidade="Belo Horizonte">
+                <div class="card shadow-lg h-100 border-0 rounded-4 p-3">
+                    <h5 class="fw-bold">Colégio Flor</h5>
+                    <p class="text-muted">Ensino Médio</p>
+                    <p class="fs-3 fw-bold text-gradient">R$ 300,00</p>
+                    <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Saiba Mais</a>
+                </div>
+            </div>
+            <div class="col-md-4 escola-card" data-cidade="São Paulo">
+                <div class="card shadow-lg h-100 border-0 rounded-4 p-3">
+                    <h5 class="fw-bold">Colégio Rosa</h5>
+                    <p class="text-muted">Ensino Médio</p>
+                    <p class="fs-3 fw-bold text-gradient">R$ 500,00</p>
+                    <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+            
+        <div class="text-center mt-4">
+            <button id="verMaisBtn" class="btn btn-primary btn-lg px-5 py-2" style="display:none;">Ver Mais</button>
         </div>
     </div>
 </section>
+
+
+
+<script>
+    const filtro = document.getElementById('cidadeFiltro');
+    const todasEscolas = Array.from(document.querySelectorAll('.escola-card'));
+    let escolaIndex = 0;
+
+    function mostrarEscolas() {
+        const escolasVisiveis = todasEscolas.filter(card => {
+            return filtro.value === 'todas' || card.dataset.cidade === filtro.value;
+        });
+
+        const mostrar = escolasVisiveis.slice(escolaIndex, escolaIndex + 3);
+        mostrar.forEach(card => card.style.display = 'block');
+
+        escolaIndex += 3;
+
+        const verMaisBtn = document.getElementById('verMaisBtn');
+        verMaisBtn.style.display = escolasVisiveis.length > escolaIndex ? 'inline-block' : 'none';
+    }
+
+    window.addEventListener('load', () => {
+        mostrarEscolas();
+    });
+
+    document.getElementById('verMaisBtn').addEventListener('click', mostrarEscolas);
+
+    filtro.addEventListener('change', () => {
+        todasEscolas.forEach(card => card.style.display = 'none');
+        escolaIndex = 0;
+        mostrarEscolas();
+    });
+
+</script>
+
 
 
 <section id="sobre" class="p-5 text-center bg-primary text-white rounded">
@@ -310,12 +331,127 @@
 
 
 <style>
+    .navbar {
+        background: rgba(0, 0, 0, 0.6) !important;
+        backdrop-filter: blur(8px);
+        padding: 15px 0;
+    }
+
+    .navbar-nav .nav-item {
+        display: flex;
+    }
+
+    .navbar-brand {
+        font-weight: 700;
+        font-size: 1.5rem;
+        background: #0d6efd;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
     .navbar-nav .nav-link {
         color: #fff !important;
         margin-left: 1.5rem;
         margin-right: 1.5rem;
         transition: color 0.2s;
     }
+
+        .navbar-nav .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0%;
+            height: 2px;
+            background: #0d6efd;
+            transition: width 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #0d6efd !important;
+        }
+
+            .navbar-nav .nav-link:hover::after {
+                width: 100%;
+            }
+
+
+    .btn-login {
+        background: #fff;
+        color: #1967FF;
+        border: 1px solid rgba(25,103,255,0.12);
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        line-height: 1;
+        height: 32px; 
+    }
+
+        .btn-login svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .btn-login:hover {
+            background: #f4f8ff;
+            text-decoration: none;
+        }
+
+    .navbar-nav .nav-link {
+        color: #fff !important;
+        margin: 0 0.9rem;
+        font-weight: 500;
+        font-size: 0.95rem;
+        padding: 0;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link {
+        color: #fff !important;
+        font-weight: 500;
+        position: relative;
+        padding: 8px 15px;
+        transition: color 0.3s ease;
+    }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            background: #0d6efd;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #0d6efd !important;
+        }
+
+            .nav-link:hover::after {
+                width: 100%;
+            }
+
+    .navbar .btn-contato {
+        background: #0d6efd;
+        color: #fff !important;
+        padding: 8px 18px;
+        border-radius: 20px;
+        transition: 0.3s;
+    }
+
+        .navbar .btn-contato:hover {
+            background: #0b5ed7;
+            transform: translateY(-2px);
+        }
+
 
     .navbar-nav .nav-link:hover,
     .navbar-nav .nav-link.active {
@@ -358,5 +494,37 @@
         -webkit-text-fill-color: transparent;
     }
 
+
+    .btn-login {
+        background: #ffffff;
+        color: #1967FF;
+        border: 1px solid rgba(25,103,255,0.12);
+        padding: 8px 14px;
+        font-weight: 600;
+        border-radius: 10px;
+        text-decoration: none;
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+        line-height: 1;
+    }
+
+        .btn-login svg path {
+            fill: #1967FF;
+        }
+
+        .btn-login:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 10px rgba(25,103,255,0.06);
+        }
+
+    .btn-login svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .escola-card {
+        display: none;
+    }
 </style>
 

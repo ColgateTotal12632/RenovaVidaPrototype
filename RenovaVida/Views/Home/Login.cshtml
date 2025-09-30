@@ -1,0 +1,284 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-4 text-primary" href="/Home/Index">Renova Vida</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#inicio">Início</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#como-funciona">Como Funciona</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#beneficios">Benefícios</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#depoimentos">Depoimentos</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#escolas">Escolas</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#sobre">Sobre Nós</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#contato">Contato</a></li>
+            </ul>
+
+            <div class="d-flex align-items-center ms-3">
+                <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary fw-semibold px-3">
+                    ← Voltar
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<section class="login-section d-flex align-items-center justify-content-center">
+    <div class="login-card shadow">
+        <h2 class="text-center mb-4">Entrar</h2>
+
+        <form>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="seuemail@email.com">
+            </div>
+
+            <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="senha" placeholder="********">
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="lembrar">
+                    <label class="form-check-label" for="lembrar">Lembrar-me</label>
+                </div>
+                <a href="#" class="text-decoration-none forgot-link">Esqueceu a senha?</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Entrar</button>
+        </form>
+
+        <p class="text-center mt-4 small">
+            Não tem conta? <a asp-controller="Home" asp-action="Cadastro" class="cadastro-link">Cadastre-se</a>
+        </p>
+    </div>
+</section>
+
+
+<style>
+    .login-section {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f4f8ff, #ffffff);
+        padding: 20px;
+    }
+
+    .login-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 2.5rem;
+        width: 100%;
+        max-width: 400px;
+        animation: fadeInUp 0.6s ease;
+    }
+
+        .login-card h2 {
+            font-weight: 700;
+            color: #1967FF;
+        }
+
+        .login-card .form-control {
+            border-radius: 8px;
+            border: 1px solid #d6e0f5;
+            padding: 10px;
+            transition: 0.3s;
+        }
+
+            .login-card .form-control:focus {
+                border-color: #1967FF;
+                box-shadow: 0 0 0 0.2rem rgba(25, 103, 255, 0.25);
+            }
+
+        .login-card .forgot-link {
+            font-size: 0.85rem;
+            color: #1967FF;
+        }
+
+        .login-card .cadastro-link {
+            font-weight: 600;
+            color: #1967FF;
+            text-decoration: none;
+        }
+
+            .login-card .cadastro-link:hover {
+                text-decoration: underline;
+            }
+
+        .login-card .btn-primary {
+            background: #1967FF;
+            border: none;
+            border-radius: 8px;
+            padding: 10px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+            .login-card .btn-primary:hover {
+                background: #0d55d8;
+                transform: translateY(-2px);
+            }
+
+    .navbar {
+        background: rgba(0, 0, 0, 0.6) !important;
+        backdrop-filter: blur(8px);
+        padding: 15px 0;
+    }
+
+    .navbar-nav .nav-item {
+        display: flex;
+    }
+
+    .navbar-brand {
+        font-weight: 700;
+        font-size: 1.5rem;
+        background: #0d6efd;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .navbar-nav .nav-link {
+        color: #fff !important;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        transition: color 0.2s;
+    }
+
+        .navbar-nav .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0%;
+            height: 2px;
+            background: #0d6efd;
+            transition: width 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #0d6efd !important;
+        }
+
+            .navbar-nav .nav-link:hover::after {
+                width: 100%;
+            }
+
+
+    .btn-login {
+        background: #fff;
+        color: #1967FF;
+        border: 1px solid rgba(25,103,255,0.12);
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        line-height: 1;
+        height: 32px;
+    }
+
+        .btn-login svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .btn-login:hover {
+            background: #f4f8ff;
+            text-decoration: none;
+        }
+
+    .navbar-nav .nav-link {
+        color: #fff !important;
+        margin: 0 0.9rem;
+        font-weight: 500;
+        font-size: 0.95rem;
+        padding: 0;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link {
+        color: #fff !important;
+        font-weight: 500;
+        position: relative;
+        padding: 8px 15px;
+        transition: color 0.3s ease;
+    }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            background: #0d6efd;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #0d6efd !important;
+        }
+
+            .nav-link:hover::after {
+                width: 100%;
+            }
+
+    .navbar .btn-contato {
+        background: #0d6efd;
+        color: #fff !important;
+        padding: 8px 18px;
+        border-radius: 20px;
+        transition: 0.3s;
+    }
+
+        .navbar .btn-contato:hover {
+            background: #0b5ed7;
+            transform: translateY(-2px);
+        }
+
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+        color: #0d6efd !important;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 50, 30, 0.7)), url('/img/hero-educacao.jpg') center/cover no-repeat;
+    }
+
+
+    .hover-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+    section {
+        padding-top: 70px;
+    }
+
+    .hover-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .hover-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+</style>
