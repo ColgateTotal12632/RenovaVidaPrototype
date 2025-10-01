@@ -185,62 +185,87 @@
             <span style="width:80px; height:4px; background:#0d6efd; border-radius:4px; display:inline-block;"></span>
         </div>
 
-        <div class="d-flex justify-content-center mb-4">
-            <select id="cidadeFiltro" class="form-select w-auto">
-                <option value="todas">Todas as Cidades</option>
-                <option value="São Paulo">São Paulo</option>
-                <option value="Rio de Janeiro">Rio de Janeiro</option>
-                <option value="Belo Horizonte">Belo Horizonte</option>
-            </select>
+        <!--Parte dos filtros (só pra não esquecer)-->
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <select id="cidadeFiltro" class="form-select text-primary d-inline-block mb-2 border-primary">
+                    <option value="todas">Todas as Cidades</option>
+                    <option value="São Paulo">São Paulo</option>
+                    <option value="Rio de Janeiro">Rio de Janeiro</option>
+                    <option value="Belo Horizonte">Belo Horizonte</option>
+                </select>
+            </div>
+
+            <div class="col-auto">
+                <select id="modalidadeFiltro" class="form-select text-primary d-inline-block md-2 border-primary">
+                    <option value="Modalidade">Modalidade</option>
+                    <option value="EaD">EaD</option>
+                    <option value="Presencial">Presencial</option>
+                    <option value="Semipresencial">Semipresencial</option>
+                </select>
+            </div>
         </div>
 
+        <!----------------------------------------------------------------->
         <div id="escolasContainer" class="row g-4 justify-content-center">
-            <div class="col-md-4 escola-card" data-cidade="São Paulo">
+            <div class="col-md-4 escola-card" data-cidade="São Paulo" data-modalidade="Presencial">
                 <div class="card shadow-lg h-100 border-0 rounded-4 p-3">
                     <h5 class="fw-bold">Colégio Alfa</h5>
                     <p class="text-muted">Ensino Fundamental e Médio</p>
+                    <span class="fs-6 text-muted text-decoration-line-through me-2">R$ 600,00</span>
                     <p class="fs-3 fw-bold text-gradient">R$ 450,00</p>
                     <a asp-area="" asp-controller="Home" asp-action="Detalhe" class="btn btn-primary px-4 py-2 rounded-pill">Saiba Mais</a>
+                    <a asp-area="" asp-controller="Home" asp-action="QueroEstudar" class="btn btn-white border-primary text-primary px-4 py-2 rounded-pill mt-1">Quero Estudar Aqui</a>
                 </div>
             </div>
-            <div class="col-md-4 escola-card" data-cidade="Rio de Janeiro">
+            <div class="col-md-4 escola-card" data-cidade="Rio de Janeiro" data-modalidade="EaD">
                 <div class="card shadow-lg h-100 border-0 rounded-4 p-3">
                     <h5 class="fw-bold">Escola Beta</h5>
                     <p class="text-muted">Educação Infantil</p>
+                    <span class="fs-6 text-muted text-decoration-line-through me-2">R$ 500,00</span>
                     <p class="fs-3 fw-bold text-gradient">R$ 320,00</p>
                     <a asp-area="" asp-controller="Home" asp-action="Detalhe" class="btn btn-primary px-4 py-2 rounded-pill">Saiba Mais</a>
+                    <a asp-area="" asp-controller="Home" asp-action="QueroEstudar" class="btn btn-white border-primary text-primary px-4 py-2 rounded-pill mt-1">Quero Estudar Aqui</a>
                 </div>
             </div>
-            <div class="col-md-4 escola-card" data-cidade="Belo Horizonte">
+            <div class="col-md-4 escola-card" data-cidade="Belo Horizonte" data-modalidade="Semipresencial">
                 <div class="card shadow-lg h-100 border-0 rounded-4 p-3">
                     <h5 class="fw-bold">Instituto RedPill</h5>
                     <p class="text-muted">Ensino Médio</p>
+                    <span class="fs-6 text-muted text-decoration-line-through me-2">R$ 700,00</span>
                     <p class="fs-3 fw-bold text-gradient">R$ 510,00</p>
                     <a asp-area="" asp-controller="Home" asp-action="Detalhe" class="btn btn-primary px-4 py-2 rounded-pill">Saiba Mais</a>
+                    <a asp-area="" asp-controller="Home" asp-action="QueroEstudar" class="btn btn-white border-primary text-primary px-4 py-2 rounded-pill mt-1">Quero Estudar Aqui</a>
                 </div>
             </div>
-            <div class="col-md-4 escola-card" data-cidade="Rio de Janeiro">
+            <div class="col-md-4 escola-card" data-cidade="Rio de Janeiro" data-modalidade="Presencial">
             <div class="card shadow-lg h-100 border-0 rounded-4 p-3">
                 <h5 class="fw-bold">Colégio Bariri</h5>
                 <p class="text-muted">Ensino Médio</p>
+                    <span class="fs-6 text-muted text-decoration-line-through me-2">R$ 350,00</span>
                 <p class="fs-3 fw-bold text-gradient">R$ 267,00</p>
                     <a asp-area="" asp-controller="Home" asp-action="Detalhe" class="btn btn-primary px-4 py-2 rounded-pill">Saiba Mais</a>
+                    <a asp-area="" asp-controller="Home" asp-action="QueroEstudar" class="btn btn-white border-primary text-primary px-4 py-2 rounded-pill mt-1">Quero Estudar Aqui</a>
             </div>
         </div>
-            <div class="col-md-4 escola-card" data-cidade="Belo Horizonte">
+            <div class="col-md-4 escola-card" data-cidade="Belo Horizonte" data-modalidade="EaD">
                 <div class="card shadow-lg h-100 border-0 rounded-4 p-3">
                     <h5 class="fw-bold">Colégio Flor</h5>
                     <p class="text-muted">Ensino Médio</p>
+                    <span class="fs-6 text-muted text-decoration-line-through me-2">R$ 500,00</span>
                     <p class="fs-3 fw-bold text-gradient">R$ 300,00</p>
                     <a asp-area ="" asp-controller="Home" asp-action="Detalhe" class="btn btn-primary px-4 py-2 rounded-pill">Saiba Mais</a>
+                    <a asp-area="" asp-controller="Home" asp-action="QueroEstudar" class="btn btn-white border-primary text-primary px-4 py-2 rounded-pill mt-1">Quero Estudar Aqui</a>
                 </div>
             </div>
-            <div class="col-md-4 escola-card" data-cidade="São Paulo">
+            <div class="col-md-4 escola-card" data-cidade="São Paulo" data-modalidade="Semipresencial">
                 <div class="card shadow-lg h-100 border-0 rounded-4 p-3">
                     <h5 class="fw-bold">Colégio Rosa</h5>
                     <p class="text-muted">Ensino Médio</p>
+                    <span class="fs-6 text-muted text-decoration-line-through me-2">R$ 600,00</span>
                     <p class="fs-3 fw-bold text-gradient">R$ 500,00</p>
                     <a asp-area="" asp-controller="Home" asp-action="Detalhe" class="btn btn-primary px-4 py-2 rounded-pill">Saiba Mais</a>
+                    <a asp-area="" asp-controller="Home" asp-action="QueroEstudar" class="btn btn-white border-primary text-primary px-4 py-2 rounded-pill mt-1">Quero Estudar Aqui</a>
                 </div>
             </div>
         </div>
@@ -254,37 +279,52 @@
 
 
 <script>
-    const filtro = document.getElementById('cidadeFiltro');
+    const filtroCidade = document.getElementById('cidadeFiltro');
+    const filtroModalidade = document.getElementById('modalidadeFiltro');
     const todasEscolas = Array.from(document.querySelectorAll('.escola-card'));
     let escolaIndex = 0;
+    let escolasVisiveis = [];
+
+    function atualizarEscolasVisiveis() {
+        escolasVisiveis = todasEscolas.filter(card => {
+            const cidadeOk = filtroCidade.value === 'todas' || card.dataset.cidade === filtroCidade.value;
+            const modalidadeSelecionada = filtroModalidade.value;
+            if (modalidadeSelecionada === 'Modalidade') return cidadeOk;
+            const modalidadeOk = (card.dataset.modalidade || '').toLowerCase() === modalidadeSelecionada.toLowerCase();
+            return cidadeOk && modalidadeOk;
+        });
+    }
+
+    function esconderTodasEscolas() {
+        todasEscolas.forEach(card => card.style.display = 'none');
+    }
 
     function mostrarEscolas() {
-        const escolasVisiveis = todasEscolas.filter(card => {
-            return filtro.value === 'todas' || card.dataset.cidade === filtro.value;
-        });
-
         const mostrar = escolasVisiveis.slice(escolaIndex, escolaIndex + 3);
         mostrar.forEach(card => card.style.display = 'block');
-
         escolaIndex += 3;
 
         const verMaisBtn = document.getElementById('verMaisBtn');
         verMaisBtn.style.display = escolasVisiveis.length > escolaIndex ? 'inline-block' : 'none';
     }
 
-    window.addEventListener('load', () => {
+    function resetarEExibir() {
+        escolaIndex = 0;
+        atualizarEscolasVisiveis();
+        esconderTodasEscolas();
         mostrarEscolas();
+    }
+
+    window.addEventListener('load', () => {
+        resetarEExibir();
     });
 
     document.getElementById('verMaisBtn').addEventListener('click', mostrarEscolas);
 
-    filtro.addEventListener('change', () => {
-        todasEscolas.forEach(card => card.style.display = 'none');
-        escolaIndex = 0;
-        mostrarEscolas();
-    });
-
+    filtroCidade.addEventListener('change', resetarEExibir);
+    filtroModalidade.addEventListener('change', resetarEExibir);
 </script>
+
 
 
 
