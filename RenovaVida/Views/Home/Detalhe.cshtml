@@ -1,0 +1,383 @@
+@{
+    ViewData["Title"] = "Detalhe da Escola";
+}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-4 text-primary" href="/Home/Index">Renova Vida</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#inicio">Início</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#como-funciona">Como Funciona</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#beneficios">Benefícios</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#depoimentos">Depoimentos</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#escolas">Escolas</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#sobre">Sobre Nós</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#contato">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container py-5">
+    <div class="row g-4 align-items-start">
+        <div class="col-md-5">
+            <div id="carouselEscola" class="carousel slide mb-3 shadow rounded" data-bs-ride="carousel">
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                        <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80" class="d-block w-130" alt="Fachada da escola">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" class="d-block w-130" alt="Sala de aula">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=600&q=80" class="d-block w-130" alt="Quadra poliesportiva">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=600&q=80" class="d-block w-130" alt="Laboratório de informática">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselEscola" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselEscola" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselEscola" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselEscola" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselEscola" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselEscola" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="school-details bg-white shadow rounded-4 p-4 mb-4 border">
+                <h2 class="fw-bold mb-2 text-primary">Colégio Alfa</h2>
+                <p class="text-muted mb-1">Ensino Fundamental e Médio</p>
+                <p class="mb-3"><i class="bi bi-geo-alt-fill text-success"></i> São Paulo, SP</p>
+                <div class="mb-3">
+                    <span class="fs-6 text-muted text-decoration-line-through me-2">R$ 600,00</span>
+                    <span class="badge bg-success fs-6">R$ 450,00</span>
+                    <span class="badge bg-danger ms-2">Desconto</span>
+                </div>
+                <p>
+                    O Colégio Alfa é referência em educação de qualidade, com infraestrutura moderna, professores experientes e foco no desenvolvimento integral do aluno.
+                </p>
+                <ul class="list-unstyled mb-3">
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Laboratórios de ciências e informática</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Quadra poliesportiva coberta</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Projetos de reforço escolar</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Atendimento psicopedagógico</li>
+                </ul>
+                <a asp-controller="Home" asp-action="QueroEstudar" class="btn btn-primary btn-lg px-4">Quero estudar aqui</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="school-extra-info-full bg-white shadow rounded-4 mx-0 my-5 px-4 px-md-5 py-5 w-100 border">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5 class="fw-bold text-primary mb-3">Mais informações</h5>
+                <div class="mb-2">
+                    <strong>Contato:</strong> (11) 99999-9999 &nbsp;|&nbsp; <a href="mailto:contato@colegioalfa.com" class="text-decoration-none text-primary">contato@colegioalfa.com</a>
+                </div>
+                <div class="mb-2">
+                    <strong>Endereço:</strong> Rua das Flores, 123 - Centro, São Paulo - SP
+                </div>
+                <div class="mb-2">
+                    <strong>Horário de atendimento:</strong> Segunda a Sexta, das 7h às 18h
+                </div>
+                <div class="mb-2">
+                    <strong>Redes sociais:</strong>
+                    <a href="#" class="text-primary me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-primary me-2"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-primary"><i class="bi bi-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5 class="fw-bold text-primary mb-3">Curso em Destaque</h5>
+                <div class="mb-2">
+                    <strong>Nome do Curso:</strong> Ensino Médio Integral
+                </div>
+                <div class="mb-2">
+                    <strong>Duração:</strong> 3 anos
+                </div>
+                <div class="mb-2">
+                    <strong>Turno:</strong> Manhã e Tarde
+                </div>
+                <div class="mb-2">
+                    <strong>Grade Curricular:</strong>
+                    <ul class="mb-1">
+                        <li>Matemática, Português, Inglês</li>
+                        <li>Ciências da Natureza e Humanas</li>
+                        <li>Robótica e Programação</li>
+                        <li>Projeto de Vida</li>
+                    </ul>
+                </div>
+                <div class="mb-2">
+                    <strong>Certificação:</strong> Diploma reconhecido pelo MEC
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h5 class="fw-bold text-primary mb-3">Depoimento</h5>
+                <blockquote class="blockquote fst-italic text-secondary mt-2 mb-0">
+                    "O Alfa mudou a vida do meu filho! Professores atenciosos e estrutura excelente."
+                    <footer class="blockquote-footer mt-1">Juliana, mãe de aluno</footer>
+                </blockquote>
+                <div class="mt-4">
+                    <h6 class="fw-bold text-primary">Diferenciais do curso</h6>
+                    <ul class="mb-0">
+                        <li><i class="bi bi-star-fill text-warning me-1"></i> Aulas de reforço gratuitas</li>
+                        <li><i class="bi bi-star-fill text-warning me-1"></i> Simulados ENEM e vestibulares</li>
+                        <li><i class="bi bi-star-fill text-warning me-1"></i> Orientação de carreira</li>
+                        <li><i class="bi bi-star-fill text-warning me-1"></i> Atividades extracurriculares</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .school-details {
+        background: #fff;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        border-radius: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+    .school-extra-info-full {
+        background: #fff;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+        border-radius: 1.2rem;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100vw;
+    }
+
+    .login-section {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f4f8ff, #ffffff);
+        padding: 20px;
+    }
+
+    .login-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 2.5rem;
+        width: 100%;
+        max-width: 400px;
+        animation: fadeInUp 0.6s ease;
+    }
+
+        .login-card h2 {
+            font-weight: 700;
+            color: #1967FF;
+        }
+
+        .login-card .form-control {
+            border-radius: 8px;
+            border: 1px solid #d6e0f5;
+            padding: 10px;
+            transition: 0.3s;
+        }
+
+            .login-card .form-control:focus {
+                border-color: #1967FF;
+                box-shadow: 0 0 0 0.2rem rgba(25, 103, 255, 0.25);
+            }
+
+        .login-card .forgot-link {
+            font-size: 0.85rem;
+            color: #1967FF;
+        }
+
+        .login-card .cadastro-link {
+            font-weight: 600;
+            color: #1967FF;
+            text-decoration: none;
+        }
+
+            .login-card .cadastro-link:hover {
+                text-decoration: underline;
+            }
+
+        .login-card .btn-primary {
+            background: #1967FF;
+            border: none;
+            border-radius: 8px;
+            padding: 10px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+            .login-card .btn-primary:hover {
+                background: #0d55d8;
+                transform: translateY(-2px);
+            }
+
+    .navbar {
+        background: rgba(0, 0, 0, 0.6) !important;
+        backdrop-filter: blur(8px);
+        padding: 15px 0;
+    }
+
+    .navbar-nav .nav-item {
+        display: flex;
+    }
+
+    .navbar-brand {
+        font-weight: 700;
+        font-size: 1.5rem;
+        background: #0d6efd;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .navbar-nav .nav-link {
+        color: #fff !important;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        transition: color 0.2s;
+    }
+
+        .navbar-nav .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0%;
+            height: 2px;
+            background: #0d6efd;
+            transition: width 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #0d6efd !important;
+        }
+
+            .navbar-nav .nav-link:hover::after {
+                width: 100%;
+            }
+
+
+    .btn-login {
+        background: #fff;
+        color: #1967FF;
+        border: 1px solid rgba(25,103,255,0.12);
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        line-height: 1;
+        height: 32px;
+    }
+
+        .btn-login svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .btn-login:hover {
+            background: #f4f8ff;
+            text-decoration: none;
+        }
+
+    .navbar-nav .nav-link {
+        color: #fff !important;
+        margin: 0 0.9rem;
+        font-weight: 500;
+        font-size: 0.95rem;
+        padding: 0;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link {
+        color: #fff !important;
+        font-weight: 500;
+        position: relative;
+        padding: 8px 15px;
+        transition: color 0.3s ease;
+    }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            background: #0d6efd;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #0d6efd !important;
+        }
+
+            .nav-link:hover::after {
+                width: 100%;
+            }
+
+    .navbar .btn-contato {
+        background: #0d6efd;
+        color: #fff !important;
+        padding: 8px 18px;
+        border-radius: 20px;
+        transition: 0.3s;
+    }
+
+        .navbar .btn-contato:hover {
+            background: #0b5ed7;
+            transform: translateY(-2px);
+        }
+
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+        color: #0d6efd !important;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 50, 30, 0.7)), url('/img/hero-educacao.jpg') center/cover no-repeat;
+    }
+
+
+    .hover-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+    section {
+        padding-top: 70px;
+    }
+
+    .hover-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .hover-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+</style>

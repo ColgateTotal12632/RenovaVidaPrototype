@@ -1,0 +1,319 @@
+﻿@{
+    ViewData["Title"] = "Quero Estudar Aqui";
+}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-4 text-primary" href="/Home/Index">Renova Vida</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#inicio">Início</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#como-funciona">Como Funciona</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#beneficios">Benefícios</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#depoimentos">Depoimentos</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#escolas">Escolas</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#sobre">Sobre Nós</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="/Home/Index#contato">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container py-5">
+    <div class="row g-4 align-items-start">
+        <div class="col-md-5">
+            <div class="bg-white shadow rounded-4 p-3 mb-4 text-center">
+                <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-4 mb-3 rounded" alt="Fachada da escola">
+                <h3 class="fw-bold text-primary mb-1">Colégio Alfa</h3>
+                <span class="badge bg-success fs-6 mb-2">R$ 450,00 <span class="badge bg-danger ms-2">Desconto</span></span>
+                <div class="text-muted mb-2">Ensino Fundamental e Médio</div>
+                <div class="mb-2"><i class="bi bi-geo-alt-fill text-success"></i> São Paulo, SP</div>
+                <div class="mb-2"><i class="bi bi-clock"></i> Matrículas abertas</div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="bg-white shadow rounded-4 p-4 mb-4 border">
+                <h2 class="fw-bold mb-3 text-primary">Quero Estudar Aqui</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome completo</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cpf" class="form-label">CPF</label>
+                        <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" maxlength="14" required pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="dataNascimento" class="form-label">Data de Nascimento</label>
+                        <input type="date" class="form-control" id="dataNascimento" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="celular" class="form-label">Celular</label>
+                        <input type="tel" class="form-control" id="celular" placeholder="(99) 99999-9999" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cep" class="form-label">CEP</label>
+                        <input type="text" class="form-control" id="cep" placeholder="00000-000" maxlength="9" required pattern="\d{5}-?\d{3}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="genero" class="form-label">Gênero</label>
+                        <select class="form-select" id="genero" required>
+                            <option value="">Selecione</option>
+                            <option>Feminino</option>
+                            <option>Masculino</option>
+                            <option>Outro</option>
+                            <option>Prefiro não informar</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg w-100">Enviar Interesse</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="school-extra-info-full bg-white shadow rounded-4 mx-0 my-5 px-4 px-md-5 py-5 w-100 border">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5 class="fw-bold text-primary mb-3">Mais informações</h5>
+                <div class="mb-2">
+                    <strong>Contato:</strong> (11) 99999-9999 &nbsp;|&nbsp; <a href="mailto:contato@colegioalfa.com" class="text-decoration-none text-primary">contato@colegioalfa.com</a>
+                </div>
+                <div class="mb-2">
+                    <strong>Endereço:</strong> Rua das Flores, 123 - Centro, São Paulo - SP
+                </div>
+                <div class="mb-2">
+                    <strong>Horário de atendimento:</strong> Segunda a Sexta, das 7h às 18h
+                </div>
+                <div class="mb-2">
+                    <strong>Redes sociais:</strong>
+                    <a href="#" class="text-primary me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-primary me-2"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-primary"><i class="bi bi-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5 class="fw-bold text-primary mb-3">Curso em Destaque</h5>
+                <div class="mb-2">
+                    <strong>Nome do Curso:</strong> Ensino Médio Integral
+                </div>
+                <div class="mb-2">
+                    <strong>Duração:</strong> 3 anos
+                </div>
+                <div class="mb-2">
+                    <strong>Turno:</strong> Manhã e Tarde
+                </div>
+                <div class="mb-2">
+                    <strong>Grade Curricular:</strong>
+                    <ul class="mb-1">
+                        <li>Matemática, Português, Inglês</li>
+                        <li>Ciências da Natureza e Humanas</li>
+                        <li>Robótica e Programação</li>
+                        <li>Projeto de Vida</li>
+                    </ul>
+                </div>
+                <div class="mb-2">
+                    <strong>Certificação:</strong> Diploma reconhecido pelo MEC
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h5 class="fw-bold text-primary mb-3">Depoimento</h5>
+                <blockquote class="blockquote fst-italic text-secondary mt-2 mb-0">
+                    "O Alfa mudou a vida do meu filho! Professores atenciosos e estrutura excelente."
+                    <footer class="blockquote-footer mt-1">Juliana, mãe de aluno</footer>
+                </blockquote>
+                <div class="mt-4">
+                    <h6 class="fw-bold text-primary">Diferenciais do curso</h6>
+                    <ul class="mb-0">
+                        <li><i class="bi bi-star-fill text-warning me-1"></i> Aulas de reforço gratuitas</li>
+                        <li><i class="bi bi-star-fill text-warning me-1"></i> Simulados ENEM e vestibulares</li>
+                        <li><i class="bi bi-star-fill text-warning me-1"></i> Orientação de carreira</li>
+                        <li><i class="bi bi-star-fill text-warning me-1"></i> Atividades extracurriculares</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .school-details,
+    .bg-white.shadow.rounded-4.p-3.mb-4.text-center,
+    .bg-white.shadow.rounded-4.p-4.mb-4.border,
+    .school-extra-info-full {
+        background: #fff;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        border-radius: 1.2rem;
+    }
+    .school-extra-info-full {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100vw;
+    }
+
+    .navbar {
+        background: rgba(0, 0, 0, 0.6) !important;
+        backdrop-filter: blur(8px);
+        padding: 15px 0;
+    }
+
+    .navbar-nav .nav-item {
+        display: flex;
+    }
+
+    .navbar-brand {
+        font-weight: 700;
+        font-size: 1.5rem;
+        background: #0d6efd;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .navbar-nav .nav-link {
+        color: #fff !important;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        transition: color 0.2s;
+    }
+
+        .navbar-nav .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0%;
+            height: 2px;
+            background: #0d6efd;
+            transition: width 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #0d6efd !important;
+        }
+
+            .navbar-nav .nav-link:hover::after {
+                width: 100%;
+            }
+
+
+    .btn-login {
+        background: #fff;
+        color: #1967FF;
+        border: 1px solid rgba(25,103,255,0.12);
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        line-height: 1;
+        height: 32px;
+    }
+
+        .btn-login svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .btn-login:hover {
+            background: #f4f8ff;
+            text-decoration: none;
+        }
+
+    .navbar-nav .nav-link {
+        color: #fff !important;
+        margin: 0 0.9rem;
+        font-weight: 500;
+        font-size: 0.95rem;
+        padding: 0;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link {
+        color: #fff !important;
+        font-weight: 500;
+        position: relative;
+        padding: 8px 15px;
+        transition: color 0.3s ease;
+    }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            background: #0d6efd;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #0d6efd !important;
+        }
+
+            .nav-link:hover::after {
+                width: 100%;
+            }
+
+    .navbar .btn-contato {
+        background: #0d6efd;
+        color: #fff !important;
+        padding: 8px 18px;
+        border-radius: 20px;
+        transition: 0.3s;
+    }
+
+        .navbar .btn-contato:hover {
+            background: #0b5ed7;
+            transform: translateY(-2px);
+        }
+
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+        color: #0d6efd !important;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 50, 30, 0.7)), url('/img/hero-educacao.jpg') center/cover no-repeat;
+    }
+
+
+    .hover-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+    section {
+        padding-top: 70px;
+    }
+
+    .hover-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .hover-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+</style>
