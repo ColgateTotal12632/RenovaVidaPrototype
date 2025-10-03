@@ -178,6 +178,104 @@
 </section>
 
 
+<section id="desconto-familia" class="p-5 bg-primary text-white">
+    <div class="container">
+        <h2 class="text-center mb-4 fw-bold">Desconto Família</h2>
+        <p class="text-center mb-5 fs-5">
+            Estude junto com seus irmãos e aproveite descontos especiais! Clique em <strong>Ver Mais</strong> para descobrir.
+        </p>
+
+        <div id="descontoCards" class="row g-4 justify-content-center" style="display:none;">
+            <div class="col-md-4">
+                <div class="card h-100 text-center shadow-lg border-0 p-4 rounded-4 bg-white text-dark hover-card-scale">
+                    <img src="img/irmaos/2irmaos.jpg" alt="2 irmãos" width="60" class="mb-3 rounded">
+                    <h5 class="fw-bold">2 Irmãos</h5>
+                    <p class="fs-6 mb-0">Ganhe <strong>10%</strong> de desconto na matrícula de cada irmão!</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 text-center shadow-lg border-0 p-4 rounded-4 bg-white text-dark hover-card-scale">
+                    <img src="img/irmaos/3irmaos.jpg" alt="3 irmãos" width="60" class="mb-3 rounded">
+                    <h5 class="fw-bold">3 Irmãos</h5>
+                    <p class="fs-6 mb-0">Ganhe <strong>15%</strong> de desconto na matrícula de cada irmão!</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 text-center shadow-lg border-0 p-4 rounded-4 bg-white text-dark hover-card-scale">
+                    <img src="img/irmaos/4irmaos.jpg" alt="4 irmãos ou mais" width="60" class="mb-3 rounded">
+                    <h5 class="fw-bold">4 Irmãos ou Mais</h5>
+                    <p class="fs-6 mb-0">Ganhe <strong>20%</strong> de desconto! Quanto mais irmãos, maior o benefício.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <button id="verMaisDescontoBtn" class="btn btn-light btn-lg px-5 fw-bold text-primary shadow">Ver Mais</button>
+        </div>
+    </div>
+</section>
+
+<style>
+    #desconto-familia {
+        border-radius: 12px;
+    }
+
+    .hover-card-scale {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+
+        .hover-card-scale:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+    #descontoCards .card img {
+        transition: transform 0.3s ease;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 15px auto;
+    }
+
+    #descontoCards .card:hover img {
+        transform: rotate(-10deg) scale(1.1);
+    }
+
+    #verMaisDescontoBtn {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+        #verMaisDescontoBtn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+</style>
+
+
+<script>
+    const verMaisDescontoBtn = document.getElementById('verMaisDescontoBtn');
+    const descontoCards = document.getElementById('descontoCards');
+
+    verMaisDescontoBtn.addEventListener('click', () => {
+        descontoCards.style.display = 'flex';
+        verMaisDescontoBtn.style.display = 'none';
+        descontoCards.querySelectorAll('.card').forEach((card, i) => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(30px)';
+            setTimeout(() => {
+                card.style.transition = 'all 0.5s ease';
+                card.style.opacity = 1;
+                card.style.transform = 'translateY(0)';
+            }, i * 150);
+        });
+    });
+</script>
+
+
+
+
 <section id="escolas" class="py-5 bg-light">
     <div class="container">
         <h2 class="text-center mb-3 fw-bold">Encontre a Escola Ideal</h2>
